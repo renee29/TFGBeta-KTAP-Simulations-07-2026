@@ -1,0 +1,23 @@
+# MATLAB generated outputs can be committed selectively for releases.
+# Remove the next lines if you want every generated output tracked in git.
+code/matlab_outputs/**/previews/*.png
+code/matlab_outputs/**/previews/*.pdf
+
+# Temporary files
+*.asv
+*.m~
+.DS_Store
+__pycache__/
+.venv/
+*.log
+
+# Internal build/patch scaffolding — kept locally, excluded from the public release.
+# These document the internal patching process and are not part of the published artifact.
+original_scripts/
+diffs/
+PATCH_REPORT.md
+static_check_output.txt
+
+# Generated integrity manifest — stale once scaffolding is excluded.
+# Regenerate locally with: python tools/static_check_repo.py
+manifest_sha256.txt

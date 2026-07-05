@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Update the DOI after the Zenodo release is created."
+title: "TFGBeta messenger KTAP simulations"
+type: software
+authors:
+  - family-names: "Torres Lozano"
+    given-names: "Elena"
+  - family-names: "Calvo"
+    given-names: "Juan"
+  - family-names: "Fabregas"
+    given-names: "Rene"
+  - family-names: "Soler"
+    given-names: "Juan"
+version: "1.0.0"
+date-released: "2026-07-03"
+repository-code: "https://github.com/renee29/TFGBeta-KTAP-Simulations-07-2026"
+url: "https://github.com/renee29/TFGBeta-KTAP-Simulations-07-2026"
+abstract: "MATLAB and Python scripts used to reproduce numerical figures and fold checks for a KTAP tumour-immune model mediated by TGF-beta."
+keywords:
+  - KTAP
+  - tumour-immune dynamics
+  - TGF-beta
+  - bistability
+  - MATLAB
+  - reproducibility
+license: MIT

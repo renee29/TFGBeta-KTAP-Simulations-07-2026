@@ -1,0 +1,24 @@
+{
+  "title": "TFGBeta messenger KTAP simulations",
+  "upload_type": "software",
+  "description": "MATLAB and Python scripts used to reproduce numerical figures and fold checks for a KTAP tumour-immune model mediated by TGF-beta.",
+  "creators": [
+    {"name": "Torres Lozano, Elena"},
+    {"name": "Calvo, Juan"},
+    {"name": "Fabregas, Rene"},
+    {"name": "Soler, Juan"}
+  ],
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "MIT",
+  "keywords": [
+    "KTAP",
+    "tumour-immune dynamics",
+    "TGF-beta",
+    "bistability",
+    "MATLAB",
+    "reproducibility"
+  ],
+  "related_identifiers": [],
+  "notes": "Update repository URL, DOI, ORCID identifiers, and manuscript identifier before final Zenodo publication."
+}
