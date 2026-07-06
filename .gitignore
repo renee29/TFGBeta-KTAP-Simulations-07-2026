@@ -1,5 +1,8 @@
-# MATLAB generated outputs can be committed selectively for releases.
-# Remove the next lines if you want every generated output tracked in git.
+# MATLAB generated figures are regenerable by running the scripts — keep the repo lean.
+# The .mat DATA records under code/matlab_outputs/**/data/ ARE tracked (reproducibility record).
+# Curated previews for the README live under assets/previews/ (tracked).
+code/matlab_outputs/**/panels/*.png
+code/matlab_outputs/**/panels/*.pdf
 code/matlab_outputs/**/previews/*.png
 code/matlab_outputs/**/previews/*.pdf
 
