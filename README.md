@@ -6,7 +6,7 @@
 ![Status: Reproducibility Package](https://img.shields.io/badge/Status-Reproducibility_Package-brightgreen.svg)
 ![Model: KTAP](https://img.shields.io/badge/Model-KTAP-purple.svg)
 ![Application: Tumour-Immune](https://img.shields.io/badge/Application-Tumour--Immune-red.svg)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21298788.svg)](https://doi.org/10.5281/zenodo.21298788)
+![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21298788.svg)](https://doi.org/10.5281/zenodo.21298788)
 
 This repository accompanies the manuscript:
 
