@@ -6,8 +6,6 @@
 - Expanded the figure captions so that the plotted quantities, parameter values, and thresholds can be read without opening the MATLAB files.
 - Clarified that the Zenodo DOI is pending and aligned the public metadata descriptions.
 
-## v1.0.0-draft
-
 Initial reproducibility package for TFGBeta messenger KTAP simulations.
 
 ### Changed from working scripts
