@@ -6,7 +6,7 @@
 ![Status: Reproducibility Package](https://img.shields.io/badge/Status-Reproducibility_Package-brightgreen.svg)
 ![Model: KTAP](https://img.shields.io/badge/Model-KTAP-purple.svg)
 ![Application: Tumour-Immune](https://img.shields.io/badge/Application-Tumour--Immune-red.svg)
-![DOI: pending](https://img.shields.io/badge/DOI-pending_Zenodo-lightgrey.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21298788.svg)](https://doi.org/10.5281/zenodo.21298788)
 
 This repository accompanies the manuscript:
 
@@ -142,7 +142,7 @@ Set the argument to `true` for the optional MATLAB smoke test. The full protocol
 
 ## Citation
 
-Machine-readable citation metadata are provided in `CITATION.cff`. The Zenodo DOI has not yet been minted, so the entry below is a release template rather than a current DOI record.
+Machine-readable citation metadata are provided in `CITATION.cff`. Version 1.0.0 is archived on Zenodo as [10.5281/zenodo.21298789](https://doi.org/10.5281/zenodo.21298789).
 
 ```bibtex
 @software{torres2026tfgbeta,
@@ -151,12 +151,10 @@ Machine-readable citation metadata are provided in `CITATION.cff`. The Zenodo DO
   year      = {2026},
   publisher = {Zenodo},
   version   = {v1.0.0},
-  doi       = {10.5281/zenodo.xxxxxxx},
-  url       = {https://doi.org/10.5281/zenodo.xxxxxxx}
+  doi       = {10.5281/zenodo.21298789},
+  url       = {https://doi.org/10.5281/zenodo.21298789}
 }
 ```
-
-After Zenodo archives the GitHub release, replace `zenodo.xxxxxxx` here and in `CITATION.cff` and `.zenodo.json`.
 
 ## License
 
