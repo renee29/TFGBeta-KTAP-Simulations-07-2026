@@ -716,6 +716,7 @@ end
 
 
 function finish_axes(ax)
+    set(ax, 'Color', 'w');
     set(ax, ...
         'Box',        'off', ...
         'Layer',      'top', ...
@@ -770,6 +771,8 @@ end
 
 
 function setup_style()
+    set(groot, 'defaultFigureColor', 'w');
+    set(groot, 'defaultAxesColor', 'w');
     set(groot, 'defaultAxesTickLabelInterpreter', 'latex');
     set(groot, 'defaultLegendInterpreter',        'latex');
     set(groot, 'defaultTextInterpreter',           'latex');

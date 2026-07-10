@@ -534,6 +534,8 @@ end
 
 
 function setup_style()
+    set(groot, 'DefaultFigureColor', 'w');
+    set(groot, 'DefaultAxesColor', 'w');
     set(groot, 'DefaultAxesFontSize', 16);
     set(groot, 'DefaultAxesTickLabelInterpreter', 'latex');
     set(groot, 'DefaultAxesLabelFontSizeMultiplier', 1.0);
@@ -546,6 +548,7 @@ end
 
 
 function finish_axes(ax)
+    set(ax, 'Color', 'w');
     set(ax, 'Box', 'off', 'TickDir', 'out', 'TickLength', [0.015 0.015]);
     set(ax, 'XMinorTick', 'on', 'YMinorTick', 'on');
     % Draw box lines without top/right ticks
@@ -568,11 +571,11 @@ end
 
 
 function save_figure_bundle(fig, stem, cfg)
-    exportgraphics(fig, [stem '.pdf'], 'ContentType', 'vector');
-    exportgraphics(fig, [stem '.png'], 'Resolution', cfg.png_dpi);
-    fprintf('  -> %s.pdf\n', stem);
-    fprintf('  -> %s.png\n', stem);
+    exportgraphics(fig, [stem '.png'], 'Resolution', cfg.png_dpi, 'BackgroundColor', 'white');
+    exportgraphics(fig, [stem '.pdf'], 'ContentType', 'vector', 'BackgroundColor', 'white');
     close(fig);
+    fprintf('  -> %s.png\n', stem);
+    fprintf('  -> %s.pdf\n', stem);
 end
 
 
