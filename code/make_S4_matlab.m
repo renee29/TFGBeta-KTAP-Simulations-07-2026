@@ -6,7 +6,7 @@ function make_S4_matlab(profile)
 %   Figure S4: Eigenvalue stability analysis of the coexistence equilibrium
 %   E_coex along the bistable window for varying immunosuppression gamma.
 %
-%   Each panel shows max Re(lambda) and max |Im(lambda)| of the Jacobian
+%   Each panel shows max_j Re(zeta_j) and max_j |Im(zeta_j)| of the Jacobian
 %   eigenvalues at E_coex as a function of lambda_1, for one value of gamma.
 %   Panels are saved individually AND as a composite preview.
 %
@@ -213,7 +213,7 @@ function branch = continuation_branch(p_base, gamma, lam_arr, cfg)
         branch.lam_c = lam_arr(end);
     end
 
-   % Find Hopf crossing: where max Re(lambda) crosses zero
+   % Find Hopf crossing: where max_j Re(zeta_j) crosses zero
     branch.has_hopf = false;
     branch.lam_hopf = NaN;
     if any(exists)
@@ -362,18 +362,18 @@ function plot_single_panel(ax, lam_arr, branch, panel_idx, cfg)
         max_re     = max(re_plot, [], 2);
         max_abs_im = max(abs(im_plot), [], 2);
 
-        % Growth rate: max Re(lambda) — solid, pastel
+        % Growth rate: max_j Re(zeta_j) — solid, pastel
         c_growth = cfg.colors.panel_pastel(panel_idx, :);
         c_osc    = cfg.colors.panel_base(panel_idx, :);
 
         plot(ax, lam_plot, max_re, '-', ...
             'Color', c_growth, 'LineWidth', 2.5, ...
-            'DisplayName', 'max Re$(\lambda)$');
+            'DisplayName', '$\max_j\,\mathrm{Re}(\zeta_j)$');
 
-        % Oscillation frequency: max |Im(lambda)| — dashed, saturated
+        % Oscillation frequency: max_j |Im(zeta_j)| — dashed, saturated
         plot(ax, lam_plot, max_abs_im, '--', ...
             'Color', c_osc, 'LineWidth', 2.5, ...
-            'DisplayName', 'max $|\mathrm{Im}(\lambda)|$');
+            'DisplayName', '$\max_j\,|\mathrm{Im}(\zeta_j)|$');
 
         % Mark Hopf crossing if exists
         if branch.has_hopf
@@ -429,9 +429,9 @@ function plot_single_panel(ax, lam_arr, branch, panel_idx, cfg)
         'EdgeColor', [0.5 0.5 0.5], 'LineWidth', 0.5);
 
     % --- Axes ---
-    xlabel(ax, 'TGF-$\beta$ clearance rate $\lambda_1$', ...
+    xlabel(ax, 'TGF-$\beta$ clearance coefficient $\lambda_1$', ...
         'Interpreter', 'latex', 'FontSize', 16);
-    ylabel(ax, 'Eigenvalue $\lambda$', ...
+    ylabel(ax, 'Spectral quantities', ...
         'Interpreter', 'latex', 'FontSize', 16);
 
     xlim(ax, cfg.lam_range);

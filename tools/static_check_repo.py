@@ -28,8 +28,21 @@ FORBIDDEN = [
     "'Color', [cfg.colors.fold_line, 0.7]",
     "'BackgroundColor', [1 1 1 0.80]",
     "Stable focus",
+    "TGF-$\\beta$ clearance rate",
+    "Asymptotic tumor density",
+    "Initial tumor load",
+    "Tumor escape",
+    "Tumor density",
+    "Eigenvalue $\\lambda$",
+    "Re$(\\lambda)$",
+    "\\mathrm{Im}(\\lambda)",
     "AÑADIR",
     "era [",
+]
+FORBIDDEN_RELEASE_TEXT = [
+    "zenodo.XXXXXXX",
+    "Update the DOI after the Zenodo release is created",
+    "Zenodo DOI is pending",
 ]
 
 def sha256(path: Path) -> str:
@@ -53,6 +66,15 @@ def main() -> int:
                 errors.append(f"forbidden token in {path.relative_to(ROOT)}: {token}")
         if path.name.startswith("make_") and "save_run_data" not in text:
             errors.append(f"missing save_run_data in {path.relative_to(ROOT)}")
+    for path in sorted(ROOT.rglob("*")):
+        if not path.is_file() or ".git" in path.parts:
+            continue
+        if path.suffix.lower() not in {".md", ".cff", ".json"}:
+            continue
+        text = path.read_text(encoding="utf-8")
+        for token in FORBIDDEN_RELEASE_TEXT:
+            if token in text:
+                errors.append(f"obsolete release text in {path.relative_to(ROOT)}: {token}")
     manifest = ROOT / "manifest_sha256.txt"
     with manifest.open("w", encoding="utf-8") as fh:
         for path in sorted(p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts):

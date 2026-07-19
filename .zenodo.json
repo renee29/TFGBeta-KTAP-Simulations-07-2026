@@ -3,12 +3,24 @@
   "upload_type": "software",
   "description": "Reproducibility package for a reduced KTAP model of tumour-immune dynamics mediated by TGF-beta. It includes MATLAB figure builders, tracked numerical records, and an independent Python fold check.",
   "creators": [
-    {"name": "Torres Lozano, Elena"},
-    {"name": "Calvo, Juan"},
-    {"name": "Fabregas, Rene"},
-    {"name": "Soler, Juan"}
+    {
+      "name": "Torres Lozano, Elena",
+      "affiliation": "Department of Applied Mathematics and Modeling Nature (MNat) Research Unit, Faculty of Sciences, University of Granada, 18071 Granada, Spain"
+    },
+    {
+      "name": "Calvo, Juan",
+      "affiliation": "Department of Applied Mathematics and Modeling Nature (MNat) Research Unit, Faculty of Sciences, University of Granada, 18071 Granada, Spain"
+    },
+    {
+      "name": "Fabregas, Rene",
+      "affiliation": "Department of Applied Mathematics and Modeling Nature (MNat) Research Unit, Faculty of Sciences, University of Granada, 18071 Granada, Spain"
+    },
+    {
+      "name": "Soler, Juan",
+      "affiliation": "Department of Applied Mathematics and Modeling Nature (MNat) Research Unit, Faculty of Sciences, University of Granada, 18071 Granada, Spain"
+    }
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "language": "eng",
   "license": "MIT",
   "keywords": [
@@ -19,5 +31,11 @@
     "MATLAB",
     "reproducibility"
   ],
-  "related_identifiers": []
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/renee29/TFGBeta-KTAP-Simulations-07-2026",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
 }

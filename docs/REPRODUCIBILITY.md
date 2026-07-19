@@ -62,6 +62,6 @@ lambda_upper approx 1.058
 3. Run `run_all_figures("release")` in MATLAB.
 4. Confirm generated `matlab_outputs/S*/data/*.mat` files exist.
 5. Commit code and generated outputs if output size is acceptable.
-6. Create a GitHub release `v1.0.0`.
+6. Create a semantic GitHub release `vX.Y.Z`.
 7. Archive the GitHub release in Zenodo.
-8. Update `CITATION.cff`, `.zenodo.json`, and the manuscript code-availability statement with the Zenodo DOI.
+8. Confirm that `CITATION.cff`, `.zenodo.json`, and the manuscript use the version-independent DOI `10.5281/zenodo.21298788`.
